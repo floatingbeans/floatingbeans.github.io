@@ -1,16 +1,13 @@
 I just do stuff that i think is cool 
 
-# "holy shit honey that can of beans is fucking flying in the air"
-## -some random couple i terrorized
+> "holy shit honey that can of beans is fucking flying in the air"
+> -some random couple i terrorized
 
 stuff i do:
 * HTML shit
 * Doom modding
 * playing half life
 * breathing (sadly)
-* ok bye
-* stop making points idiot
-* STOP MAKING POINTS
 
-# "honey, the jar of beans is back!"
-## -the couple
+> "honey, the jar of beans is back!"
+> -the couple
