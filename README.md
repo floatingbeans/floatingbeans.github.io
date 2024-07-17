@@ -1,7 +1,6 @@
 I just do stuff that i think is cool 
 
-> "holy shit honey that can of beans is fucking flying in the air"
-> -some random couple i terrorized
+> "holy shit honey that can of beans is fucking flying in the air" **-some random couple i terrorized in 2013**
 
 stuff i do:
 * HTML shit
