@@ -1,7 +1,7 @@
 I just do stuff that i think is cool 
 
 # "holy shit honey that can of beans is fucking flying in the air"
-##-some random couple i terrorized
+## -some random couple i terrorized
 
 major stuff i've worked on:
 1. Nothing
