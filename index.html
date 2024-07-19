@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>FloatingBeans</title>
+
+<body id="custom">
+
+<h1>Hi, I'm FloatingBeans!</h1>
+<ul>
+    <audio id="audio" src="boop.wav"></audio>
+    <li><a href="projects.html">Projects</a></li>
+    <li>Socials</li>
+    <li onclick="play()">Exit</li>
+</ul>
+</div>
+<link rel="stylesheet" href="style.css">
+<script>
+          function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+      function play2() {
+        var audio = document.getElementById("musicPlayer");
+        audio.play();
+      }
+      
+</script>
+<script>
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('musicPlayer').play();
+    document.removeEventListener('click', musicPlay);
+}
+</script>
+</body>
+<div class="outer">
+</div>
