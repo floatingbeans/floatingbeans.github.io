@@ -15,9 +15,9 @@
 </div>
 <BR><BR>
 <ul>
-    <audio id="audio" src="boop.wav"></audio>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="socials.html"> Socials</a></li>
+  
+    <li onclick="play3()"><a  href="" onclick="window.open(`projects.html`, 'mywindow','menubar=1,resizable=1,width=1280,height=480')">Projects</a></li>
+    <li onclick="play3()"><a href="" onclick="window.open(`socials.html`, 'mywindow','menubar=1,resizable=1,width=640,height=680')"> Socials</a></li>
     <li onclick="play()" id="ext" class="exit"><a>Quit</a></li>
 </ul>
 </div>
@@ -27,10 +27,7 @@
         var audio = document.getElementById("audio");
         audio.play();
       }
-      function play2() {
-        var audio = document.getElementById("musicPlayer");
-        audio.play();
-      }
+      
       
 </script>
 <script>
@@ -58,6 +55,12 @@ function pplay() {
     var audio3 = new Audio('button7.wav');
     audio3.play()
   }
+  function play3() {
+        var audio4 = new Audio('button3.wav')
+        audio4.play();
+      }
+
+
 </script>
 
 
@@ -71,3 +74,4 @@ id="myAudio" src="Half-Life17.mp3" preload="auto">
   return myAudio.paused ? myAudio.play() : myAudio.pause();
 };
 </script>
+
