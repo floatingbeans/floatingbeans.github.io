@@ -1,94 +1,116 @@
 body {
-  animation: fadeInAnimation2 ease infinite 2s;
+  cursor: url('Crowbar.png');
+  font-family: Arial;
+  font-weight: lighter;
+  font-size: 150%;
+  background-image: url(hl.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding-left: 6.5%;
+  padding-top: 5%;
+  overflow-x: hidden;
 }
 
 
     ul {
-        font-size: 150%;
+        font-size: 200%;
         text-align: left;
     }
  li {
     list-style-type: none;
+    
  }
-    li:hover {
-        animation: fadeInAnimation ease 1s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        list-style-type: square;
-        cursor: pointer;
+    a:hover {
+     animation: darkglow ease 0.25s forwards;
         
     }
+
      a {
+cursor: pointer;
         text-decoration: none;
-        color: #00ff00;
+        color: #ffc400;
+       text-shadow:0 0 10px #ffc400 ;
      }
-body {
-/* scanlines */
-  background: linear-gradient(to top, #000000, #000000, #232, #333333);
-  background-size: 100% 1%;
-  animation: gradient 15s ease infinite;
-  background-position: 100% 50%;
+
+.exit:active, .exit:hover:active {
+  animation-name: cssAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+  0% {
+    color: red;
+  }
+  100% {
+    
+  }
+}
+
+@keyframes darkglow {
+  0% {
+    
+  }
+  100% {
+    color: #c07300;
+    text-shadow:0 0 10px #c07300 ;
+  }
+}
+
+.radio:active {
+  animation: boop 0.25s ease forwards;
+}
+
+@keyframes boop {
+  0% {
+  filter: blur(5px);
+  }
+  100% {
+    
+  }
+
+}
+.behind {
+  animation: party 0.5s infinite linear;
+  z-index: -999;
+  filter: blur(5px) opacity(50%);
+  scale: 150%;
+
+}
+.radio {
+
+  z-index: 999;
   
-
-/* retro stuff */
-  color: #00ff00;
-  font-family: "Courier New", monospace;
-  font-size: +250%;
-  text-align: center;
-  text-shadow: 0 0 50px #00ff00;
-
-/* flex stuff */
-  display: flex;
-  flex-direction: column;
-align-items: center;
 }
-@keyframes greadient {
-	0% {
-    background: linear-gradient(to top, #000000, #000000, #232, #333333);
-	}
-	100% {
-    background: linear-gradient(to top, #000033, #000000, #232, #333333);
-	}
-}
-
-@media screen{
-  body {
-    animation: scanlines infinite 15s linear ;
+@keyframes marquee {
+  50% {
+   transform: translateX(25%);
   }
-} 
-@keyframes scanlines {
-  from {
-    background-position: 0 0;
+  75% {
+    transform: translateX(-25%);
   }
-  to {
-    background-position: 0 -10%;
+  100% {
+    transform: translateX(0%);
   }
-}
-body {
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-@keyframes fadeInAnimation {
-    0% {
-        
-        filter: blur(8px);
-        backdrop-filter: blur(8px)
-    }
-    100% {
-        filter: blur(0px);
-        backdrop-filter: blur(0px)
-    }
+
 }
 
-@keyframes fadeInAnimation {
-    0% {
-        
-        filter: blur(8px);
-        backdrop-filter: blur(8px)
-    }
-    100% {
-        filter: blur(0px);
-        backdrop-filter: blur(0px)
-    }
+.moving {
+  animation: marquee 4s linear infinite;
+
+}
+
+@keyframes party {
+  0% {
+  
+  }
+  50% {
+    filter: blur(3px) opacity(90%);   
+  }
+  100% {
+ 
+  }
 }

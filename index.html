@@ -7,14 +7,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>FloatingBeans</title>
 
-<body id="custom">
+<body id="custom" onclick="pplay()">
 
-<h1>Hi, I'm FloatingBeans!</h1>
+  <div class="moving">
+<img src="logo.png" class="behind">
+<img src="logo.png" onclick="toggle()" class="radio">
+</div>
+<BR><BR>
 <ul>
     <audio id="audio" src="boop.wav"></audio>
     <li><a href="projects.html">Projects</a></li>
     <li><a href="socials.html"> Socials</a></li>
-    <li onclick="play()">Exit</li>
+    <li onclick="play()" id="ext" class="exit"><a>Quit</a></li>
 </ul>
 </div>
 <link rel="stylesheet" href="style.css">
@@ -39,3 +43,31 @@ function musicPlay() {
 </body>
 <div class="outer">
 </div>
+
+<script>
+function pplay() {
+  var audio = new Audio('bruh.mp3');
+    audio.play()
+  }
+  function play() {
+    var audio2 = new Audio('button2.mp3');
+    audio2.play()
+  }
+
+  function beep() {
+    var audio3 = new Audio('button7.wav');
+    audio3.play()
+  }
+</script>
+
+
+<audio 
+id="myAudio" src="Half-Life17.mp3" preload="auto">
+</audio>
+<script>
+  function toggle() {
+    beep()
+  var myAudio = document.getElementById("myAudio");
+  return myAudio.paused ? myAudio.play() : myAudio.pause();
+};
+</script>
