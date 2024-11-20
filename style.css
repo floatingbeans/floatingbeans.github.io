@@ -12,7 +12,17 @@ body {
   overflow: hidden;
   background-color: black;
 }
-
+.crowbar {
+  scale: 50%;
+  transform: rotateZ(45deg) translateX(50%);
+ 
+  
+}
+.crowbar{
+  position: relative;
+  animation: rotate linear infinite 1s forwards;
+ 
+}
 
     ul {
         font-size: 200%;
@@ -114,4 +124,25 @@ cursor: pointer;
   100% {
  
   }
+}
+
+@keyframes rotate {
+  0% {
+    
+    transform: rotateZ(45deg) translateX(50%);
+  
+  }
+  50% {
+  
+    transform: rotateZ(-45deg) rotateY(45deg) translateX(-50%);
+  }
+  100% {
+   
+    transform: rotateZ(45deg) translateX(50%);
+    
+  }
+}
+
+.crowbar:active {
+ filter:brightness(200%);
 }

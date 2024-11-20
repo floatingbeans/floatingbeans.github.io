@@ -17,18 +17,26 @@
 <BR><BR>
 <ul>
   
-    <li onclick="play3()"><a  href="" onclick="window.open(`projects.html`, 'mywindow','menubar=1,resizable=1,width=1280,height=480')">Projects</a></li>
-    <li onclick="play3()"><a href="" onclick="window.open(`socials.html`, 'mywindow','menubar=1,resizable=1,width=640,height=680')"> Socials</a></li>
-    <li onclick="play()" id="ext" class="exit"><a>Quit</a></li>
+    <li ><a  href="" onmousedown="hover()" onclick="window.open(`projects.html`, 'mywindow','menubar=1,resizable=1,width=1280,height=480')">Projects</a></li>
+    <li ><a href="" onmousedown="hover()" onclick="window.open(`socials.html`, 'mywindow','menubar=1,resizable=1,width=640,height=680')"> Socials</a></li>
+    <li  onmousedown="hover()" id="ext" class="exit"><a onclick="play()">Quit</a></li>
 </ul>
 </div>
+<img src="Crowbar.png" class="Crowbar" onclick="bang()">
 <link rel="stylesheet" href="style.css">
 <script>
           function play() {
         var audio = document.getElementById("audio");
         audio.play();
       }
-      
+      function bang() {
+        var bar = new Audio('bang.wav') 
+        bar.play();
+      }
+      function hover() {
+        var tun = new Audio('tundeh.wav') 
+        tun.play();
+      }
       
 </script>
 <script>
