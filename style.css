@@ -2,7 +2,7 @@ body {
   cursor: url('Crowbar.png');
   font-family: Arial;
   font-weight: lighter;
-  font-size: 150%;
+  font-size: 125%;
   background-image: url(hl.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -127,7 +127,7 @@ cursor: pointer;
 }
 
 .moving {
-  padding-bottom: 12.5%;
+  padding-bottom: 7%;
   animation: marquee 4s linear infinite;
 
 }
