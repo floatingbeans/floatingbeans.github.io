@@ -127,7 +127,7 @@ cursor: pointer;
 }
 
 .moving {
-  padding-bottom: 200px;
+  padding-bottom: 12.5%;
   animation: marquee 4s linear infinite;
 
 }
