@@ -2,7 +2,8 @@ body {
   cursor: url('Crowbar.png');
   font-family: Arial;
   font-weight: lighter;
-  font-size: 125%;
+  text-size-adjust: none;
+  font-size: 1.25rem;
   background-image: url(hl.webp);
   background-repeat: no-repeat;
   background-size: cover;
