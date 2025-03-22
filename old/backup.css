@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    width: 70%;
+    zoom: 200%;
+
+}
+a {
+    text-decoration: none;
+    color: lightblue;
+    
+}
+a:hover {
+    color: lightcoral;
+}
