@@ -21,3 +21,15 @@ window.onload = function () {
         console.warn("Element with ID 'bar' not found.");
     }
 };
+
+
+     
+var timer = window.setInterval(function(){
+    // your code goes here ...
+ if(window.screen.availWidth > 887 || window.screen.availHeight > 884) {
+        console.log("You're safe, for now.")
+    }
+    else {
+        window.location.href = "compat.html"
+    }
+}, 50);
