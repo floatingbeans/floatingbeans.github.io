@@ -27,7 +27,7 @@ backdrop-filter: brightness(1.0) opacity(0.2) blur(2%s);
 	box-shadow: #ffffff57 0px 0px 20px, inset #ffffff4c 0px 0px 15px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 200%;
-background: linear-gradient(195deg,rgb(51, 78, 128) 0%, rgb(107, 118, 162) 100%);
+background: linear-gradient(195deg,rgba(51, 78, 128, 0.539) 0%, rgba(107, 118, 162, 0.283) 100%);
 	color: white;
 	border: 1px solid white;
 	padding: 12px 25px;
