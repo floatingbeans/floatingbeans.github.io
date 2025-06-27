@@ -1,5 +1,6 @@
  function win(url) {
-var audio = new Audio('WINNAV.mp3');
+
+var audio = new Audio('CLICKER.mp3');
 audio.play()
 audio.addEventListener('ended', () => {
   window.location.assign(url);
@@ -21,7 +22,6 @@ window.onload = function () {
                 <button role="tab" aria-controls="tab-A" onclick=" win('index.html')">Homepage</button>
                 <button role="tab" aria-controls="tab-B" onclick=" win('socials.html')">Socials</button>
                 <button role="tab" aria-controls="tab-C" onclick=" win('projects.html')">Projects</button>
-                <button role="tab" aria-controls="tab-D" onclick=" win('old/warn.html')">Half Life</button>
                 <button role="tab" aria-controls="tab-E"onclick= "win('about.html')" >about/misc</button>
             </menu>
         </section>
@@ -46,3 +46,7 @@ var timer = window.setInterval(function(){
         window.location.href = "compat.html"
     }
 }, 50);
+
+
+
+

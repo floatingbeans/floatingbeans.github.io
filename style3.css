@@ -11,6 +11,8 @@ border-top: 3px rgba(191, 239, 255, 0.342) solid;
 
 }
 
+
+
 #bar {
 background-image: url(WIN7NAV.png);
 background-size: 400% 100%;
@@ -34,41 +36,10 @@ background: linear-gradient(195deg,rgba(51, 78, 128, 0.539) 0%, rgba(107, 118, 1
 	cursor: pointer;
 	border-radius: 10px;
 }
-#bar button:hover {
-	animation: button 0.5s ease-in-out forwards;
-	animation-direction: forwards;
-}
-@keyframes button {
-	0% {
-	}
-	50% {
-box-shadow: #ffffff 0px 0px 20px, inset #ffffff 0px 0px 30px;	}
-	100% {
-		box-shadow: #ffffff 0px 0px 20px, inset #ffffff 0px 0px 30px;	
-	}
-}
 
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	25% {
-		background-position: 100% 50%;
-	}
-	50% {
-		background-position: 200% 50%;
-	}
-	75%{
-		background-position: 300% 50%;
-	}
-	100% {
-		background-position: 400% 50%;
-	}
-}
-@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
 
 * {
+	filter: blur(10px);
 	text-transform: lowercase;
 }
 button {
@@ -82,13 +53,10 @@ background: linear-gradient(195deg,rgba(51, 78, 128, 0.539) 0%, rgba(107, 118, 1
 	cursor: pointer;
 	border-radius: 10px;
 }
-button:hover {
-	animation: button 0.5s ease-in-out forwards;
-	animation-direction: forwards;
-}
+
 body {
 	
-	animation: breathe2 5s forwards ease-in-out infinite, bgchnge 20s forwards ease-in-out infinite;
+
 	overflow-x: hidden;
 	font-weight: 200%;
 	text-shadow: rgb(255, 255, 255) 0px 0px 80px;
@@ -129,44 +97,4 @@ background: rgba(255, 255, 255, 0.192);
 	cursor: pointer;
 	border-radius: 10px;
 	cursor: not-allowed;
-}
-@keyframes breathe {
-	0% {
-		
-	}
-	50% {
-		filter: blur(2px);
-		text-shadow: rgba(255, 255, 255, 1) 0px 0px 100px;
-	}
-	100% {
-		
-		text-shadow: rgba(255, 255, 255, 0.5) 0px 0px 20px;
-	}
-}
-@keyframes breathe2 {
-	0% {
-		text-shadow: rgb(255, 255, 255) 0px 0px 80px;
-	}
-	50% {
-		text-shadow: rgb(255, 255, 255) 0px 0px 50px;
-	}
-	100% {
-
-	}
-}
-@keyframes bgchnge {
-	0% {
-
-	}
-	50% {
-backdrop-filter: brightness(1.25);
-	}
-	100% {
-
-	}
-}
-button:active {
-	
-	animation: button 0.5s ease-in-out backwards;
-	
 }
