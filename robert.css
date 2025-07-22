@@ -1,0 +1,17 @@
+* {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    font-family: monospace;
+    font-size: 125%;
+    text-align: center;
+}
+h1 {
+    font-size: 250%;
+}
+p {
+    text-align: left;
+}
+img {
+    display: inline-block;
+    text-align: left;
+}
