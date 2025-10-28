@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+body {
+	background-color: rgb(28, 35, 49);
+	color: white;
+	font-family: "SerenityOS Emoji", monospace;
+	text-align: center;
+
+	animation: bg 25s infinite ease-in-out;
+	
+}
+.blurred {
+animation: pixel forwards 2s ease-in-out;
+}
+* {text-transform: lowercase; font-weight: 100;}
+#bar {
+	border-bottom: 2px white solid;
+}
+button {
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px white solid;
+	font-family: Space Mono;
+	color:white;
+	
+	padding: 1em 1em;
+}
+button:hover {
+
+
+	background-color: white;
+	color:rgb(0, 0, 0);
+}
+#bar button {
+	font-size: 250%;
+	cursor: pointer;
+}
+h1 {
+	font-size: 350%;
+}
+h1:hover {
+filter: opacity(0.5);
+color: white;
+}
+@font-face {
+    font-display: block;
+    font-family: "SerenityOS Emoji";
+    font-style: normal;
+    src: local("SerenityOS Emoji"), url("SerenityOS-Emoji.ttf");
+    unicode-range: U+00A9, U+00AE, U+203C, U+2049, U+20E3, U+2122, U+2139, U+2194-2199, U+21A9-21AA, U+231A-231B, U+2328, U+2388, U+23CF, U+23E9-23F3, U+23F8-23FA, U+24C2, U+25AA-25AB, U+25B6, U+25C0, U+25FB-25FE, U+2600-27EF, U+2934-2935, U+2B00-2BFF, U+3030, U+303D, U+3297, U+3299, U+1F000-1F64F, U+1F680-1F6FF, U+1F774-1F77F, U+1F7D5-1F7FF, U+1F80C-1F80F, U+1F848-1F84F, U+1F85A-1F85F, U+1F888-1F88F, U+1F8AE-1F8FF, U+1F90C-1FAFF;
+}
+
+
+@keyframes pixel {
+	100% {
+		filter:blur(25px);
+	}
+}
+a {
+	text-decoration: none;
+	color: lightblue;
+}
+li {
+	list-style: none;
+}
