@@ -1,23 +1,51 @@
+@font-face {
+	font-family: "Segoe UI";
+	src: url(segoeui.ttf) format("truetype");
+}
+@font-face {
+	font-family: "Segoe UI Black";
+	src: url(segoeuib.ttf) format("truetype");
+}
+.content {
+border-top: 3px rgba(191, 239, 255, 0.342) solid;
+
+}
+
 #bar {
-	background: #0000006e;
-	background: linear-gradient(-45deg, #078D70, #26CEAA, #98E8C1, #7BADE2, #5049CC, #3D1A78);
-	background-size: 400% 400%;
-	animation: gradient 7s ease infinite;
-	
+background-image: url(WIN7NAV.png);
+background-size: 400% 100%;
+animation: gradient 160s ease-in-out infinite forwards;
+backdrop-filter: brightness(1.0) opacity(0.2) blur(2%s);
+  background-color: linear-gradient(195deg,rgba(0, 27, 101, 0.432) 0%, rgba(41, 50, 88, 0.328) 100%);
+  background-blend-mode: multiply;
 	padding-bottom: 2px;
 	padding-top: 2px;
 	font-family: Arial, Helvetica, sans-serif;
-	border-bottom: 2px white;
+
 }
 #bar button {
+	box-shadow: #ffffff57 0px 0px 20px, inset #ffffff4c 0px 0px 15px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 200%;
-background: rgba(0, 0, 0, 0.192);
+background: linear-gradient(195deg,rgba(51, 78, 128, 0.539) 0%, rgba(107, 118, 162, 0.283) 100%);
 	color: white;
 	border: 1px solid white;
 	padding: 12px 25px;
 	cursor: pointer;
 	border-radius: 10px;
+}
+#bar button:hover {
+	animation: button 0.5s ease-in-out forwards;
+	animation-direction: forwards;
+}
+@keyframes button {
+	0% {
+	}
+	50% {
+box-shadow: #ffffff 0px 0px 20px, inset #ffffff 0px 0px 30px;	}
+	100% {
+		box-shadow: #ffffff 0px 0px 20px, inset #ffffff 0px 0px 30px;	
+	}
 }
 
 
@@ -25,26 +53,59 @@ background: rgba(0, 0, 0, 0.192);
 	0% {
 		background-position: 0% 50%;
 	}
-	50% {
+	25% {
 		background-position: 100% 50%;
 	}
+	50% {
+		background-position: 200% 50%;
+	}
+	75%{
+		background-position: 300% 50%;
+	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 400% 50%;
 	}
 }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
 
-
-body {
-		background-color: black;
-	font-size: 120%;
+* {
+	text-transform: lowercase;
+}
+button {
+	box-shadow: #ffffff57 0px 0px 20px, inset #ffffff4c 0px 0px 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 125%;
+background: linear-gradient(195deg,rgba(51, 78, 128, 0.539) 0%, rgba(107, 118, 162, 0.283) 100%);
 	color: white;
+	border: 1px solid white;
+	padding: 12px 25px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+button:hover {
+	animation: button 0.5s ease-in-out forwards;
+	animation-direction: forwards;
+}
+body {
+	
+	animation: breathe2 5s forwards ease-in-out infinite, bgchnge 20s forwards ease-in-out infinite;
+	overflow-x: hidden;
+	font-weight: 200%;
+	text-shadow: rgb(255, 255, 255) 0px 0px 80px;
+		background-color: rgb(255, 255, 255);
+background: linear-gradient(180deg,rgb(33, 37, 51) 0%, rgb(25, 38, 57) 50%, rgba(0, 0, 0, 1) 100%);
+	font-size: 120%;
+	color: rgb(255, 255, 255);
 	margin: 0;
 	text-align: center;
-	font-family: Arial, Helvetica, sans-serif;
+	;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif;
 }
 h1,h4 {
-	font-size: 250%;
-	font-weight: 900;
+	animation: breathe 20s forwards ease-in-out infinite;
+	text-shadow: rgba(255, 255, 255, 0.5) 0px 0px 20px;
+	font-size: 500%;
+	font-family: 'Segoe UI Black', Tahoma, Geneva, Verdana, sans-serif;
 }
 li {
 	font-size: 90%;
@@ -62,10 +123,50 @@ a:hover {
 		font-family: Arial, Helvetica, sans-serif;
 	font-size: 200%;
 background: rgba(255, 255, 255, 0.192);
-	color: rgba(49, 78, 87, 0.486);
+	color: rgba(255, 255, 255, 0.486);
 	border: 1px solid white;
 	padding: 12px 25px;
 	cursor: pointer;
 	border-radius: 10px;
 	cursor: not-allowed;
+}
+@keyframes breathe {
+	0% {
+		
+	}
+	50% {
+		filter: blur(2px);
+		text-shadow: rgba(255, 255, 255, 1) 0px 0px 100px;
+	}
+	100% {
+		
+		text-shadow: rgba(255, 255, 255, 0.5) 0px 0px 20px;
+	}
+}
+@keyframes breathe2 {
+	0% {
+		text-shadow: rgb(255, 255, 255) 0px 0px 80px;
+	}
+	50% {
+		text-shadow: rgb(255, 255, 255) 0px 0px 50px;
+	}
+	100% {
+
+	}
+}
+@keyframes bgchnge {
+	0% {
+
+	}
+	50% {
+backdrop-filter: brightness(1.25);
+	}
+	100% {
+
+	}
+}
+button:active {
+	
+	animation: button 0.5s ease-in-out backwards;
+	
 }

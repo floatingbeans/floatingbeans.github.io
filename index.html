@@ -1,27 +1,49 @@
-<link href="style.css" rel="stylesheet">
-<title>FloatingBeans</title>
-<meta name="viewport" content="width=1024"><body onload="check()"></body>
-<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-<script src="global.js"></script>
-<script src="bar.js"></script>
-<head><link rel="icon" type="image/x-icon" href="Radiation_Hazard.ico"></head>
-<div id="scrpthld">
+<body onload="timecalc()">
+<center>
+<h1 class="red">-IN DEVELOPMENT-</h1>
+<h2 class="red">PLEASE COME BACK LATER.</h2>
+<div id="text"></div>
+
+<input type="range" min="0" max="100" disabled value="25" class="prog">
+
+</center>
+
+<LINK rel="stylesheet" href="old/backup.css">
+          
+    <script>
+        function timecalc() {
   
-            
-                <div id="bar"></div> 
-                <div class="content">
-                <h1>about me</h1>
-                <P style="font-size:175%;"><i>miniscule parts of my identity that don't make me paranoid by sharing them.</i></P>
-                <ul style="font-size: 175%; text-align: left; padding-left:25%;">
-                
-<p>♂️ male</p>
-<p>💻 c++, node, html, css, js</p>
-<p>🔞 minor</p>
-<p>🎮 [insert half life mention]</p>
-                </ul>
-                </div>
+        const then = new Date(Date.UTC(2025, 5, 20, 13, 30, 0,0))
+        const now = new Date();
+        console.log(now)
+        console.log(then)
+        const dif = now - then;
+            const seconds = dif / 1000;
+    const minutes = dif / (1000 * 60);
+    const hours = dif / (1000 * 60 * 60);
+    const days = dif / (1000 * 60 * 60 * 24);
+    var time = Math.floor(seconds);
+       var str = `${time} seconds`
+    if(seconds > 60) {
+        time = Math.floor(minutes);
+        var str = `${time} minutes`
+    }
+    if(minutes > 60) {
+        time = Math.floor(hours);
+        var str = `${time} hours`
+    }
+    if (hours > 60) {
+        time = Math.floor(days);
+        var str = `${time} days`
+        
+    }
+        
+ 
 
-
-<script>
-    
-</script>
+    var text = document.getElementById("text");
+    var newt = document.createElement("h2")
+    newt.id = "text"
+    newt.innerHTML = `${str} have elapsed`
+    text.replaceWith(newt)
+}
+    </script>

@@ -1,4 +1,4 @@
-function win(url) {
+ function win(url) {
 
 var audio = new Audio('CLICKER.mp3');
 audio.play()
