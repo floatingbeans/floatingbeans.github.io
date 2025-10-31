@@ -3,7 +3,8 @@ function win(url) {
 var audio = new Audio('CLICKER.mp3');
 audio.play()
 audio.addEventListener('ended', () => {
-  window.location.assign(url);
+    alert("the navbar is only for archiving reasons, all links are broken \nredirecting to homepage...")
+  window.location.assign('index.html');
 });
  }
 window.onload = function () {

@@ -1,17 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body {
-	background-color: rgb(28, 35, 49);
+	padding-top: 5%;
 	color: white;
 	font-family: "SerenityOS Emoji", monospace;
-	text-align: center;
 
-	animation: bg 25s infinite ease-in-out;
+
+	background-color: black;
 	
 }
+h1,h2,h3,h4,h5,h6,p,li,h3,h4,h5,h6 {
+	text-align: left;
+	padding-left: 5%;
+	  animation-duration: 0.01s;
+
+}
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
+ul {
+	font-size: 150%;
+}
+
 .blurred {
 animation: pixel forwards 2s ease-in-out;
 }
-* {text-transform: lowercase; font-weight: 100;}
+* {
+	font-size: 105%;
+	text-transform: lowercase; font-weight: 100; text-align: left;
+	  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 #bar {
 	border-bottom: 2px white solid;
 }
@@ -20,8 +46,9 @@ button {
 	border: 2px white solid;
 	font-family: Space Mono;
 	color:white;
-	
+	font-size: 100%;
 	padding: 1em 1em;
+	margin-left: 7.5%;
 }
 button:hover {
 
@@ -30,16 +57,24 @@ button:hover {
 	color:rgb(0, 0, 0);
 }
 #bar button {
-	font-size: 250%;
+	font-size: 200%;
 	cursor: pointer;
 }
-h1 {
-	font-size: 350%;
+h1{
+	font-size: 3.5em;
 }
-h1:hover {
-filter: opacity(0.5);
-color: white;
+h2{
+	padding-left: 7.5%;
+	font-size: 2.5em;
 }
+h3,h4,h5,h6 {
+	padding-left: 7.5%;
+	font-size: 100%;
+}
+p {
+	padding-left: 9%;
+}
+
 @font-face {
     font-display: block;
     font-family: "SerenityOS Emoji";
@@ -58,6 +93,154 @@ a {
 	text-decoration: none;
 	color: lightblue;
 }
+a:hover {
+	color: rgb(0, 191, 255);
+}
 li {
 	list-style: none;
+}
+
+html, body{
+  background: #111;
+
+}
+
+.bg-noise {
+  height: 100vh;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+.bg-noise:after {
+  -webkit-animation: noise2 1s steps(2) infinite;
+  animation: noise2 1s steps(2) infinite;
+  background-image: url('https://i.postimg.cc/yNJyHjnF/background-noise.png');
+  background-position: 50%;
+  content: "";
+  height: calc(100vh + 20rem);
+  left: -10rem;
+  position: absolute;
+  top: -10rem;
+  width: calc(100vw + 20rem);
+  will-change: transform;
+}
+
+@-webkit-keyframes noise2 {
+  0% {
+    -webkit-transform: translate3d(0, 9rem, 0);
+    transform: translate3d(0, 9rem, 0);
+  }
+  10% {
+    -webkit-transform: translate3d(-1rem, -4rem, 0);
+    transform: translate3d(-1rem, -4rem, 0);
+  }
+  20% {
+    -webkit-transform: translate3d(-8rem, 2rem, 0);
+    transform: translate3d(-8rem, 2rem, 0);
+  }
+  30% {
+    -webkit-transform: translate3d(9rem, -9rem, 0);
+    transform: translate3d(9rem, -9rem, 0);
+  }
+  40% {
+    -webkit-transform: translate3d(-2rem, 7rem, 0);
+    transform: translate3d(-2rem, 7rem, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-9rem, -4rem, 0);
+    transform: translate3d(-9rem, -4rem, 0);
+  }
+  60% {
+    -webkit-transform: translate3d(2rem, 6rem, 0);
+    transform: translate3d(2rem, 6rem, 0);
+  }
+  70% {
+    -webkit-transform: translate3d(7rem, -8rem, 0);
+    transform: translate3d(7rem, -8rem, 0);
+  }
+  80% {
+    -webkit-transform: translate3d(-9rem, 1rem, 0);
+    transform: translate3d(-9rem, 1rem, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(6rem, -5rem, 0);
+    transform: translate3d(6rem, -5rem, 0);
+  }
+  to {
+    -webkit-transform: translate3d(-7rem, 0, 0);
+    transform: translate3d(-7rem, 0, 0);
+  }
+}
+@keyframes noise2 {
+  0% {
+    -webkit-transform: translate3d(0, 9rem, 0);
+    transform: translate3d(0, 9rem, 0);
+  }
+  10% {
+    -webkit-transform: translate3d(-1rem, -4rem, 0);
+    transform: translate3d(-1rem, -4rem, 0);
+  }
+  20% {
+    -webkit-transform: translate3d(-8rem, 2rem, 0);
+    transform: translate3d(-8rem, 2rem, 0);
+  }
+  30% {
+    -webkit-transform: translate3d(9rem, -9rem, 0);
+    transform: translate3d(9rem, -9rem, 0);
+  }
+  40% {
+    -webkit-transform: translate3d(-2rem, 7rem, 0);
+    transform: translate3d(-2rem, 7rem, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-9rem, -4rem, 0);
+    transform: translate3d(-9rem, -4rem, 0);
+  }
+  60% {
+    -webkit-transform: translate3d(2rem, 6rem, 0);
+    transform: translate3d(2rem, 6rem, 0);
+  }
+  70% {
+    -webkit-transform: translate3d(7rem, -8rem, 0);
+    transform: translate3d(7rem, -8rem, 0);
+  }
+  80% {
+    -webkit-transform: translate3d(-9rem, 1rem, 0);
+    transform: translate3d(-9rem, 1rem, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(6rem, -5rem, 0);
+    transform: translate3d(6rem, -5rem, 0);
+  }
+  to {
+    -webkit-transform: translate3d(-7rem, 0, 0);
+    transform: translate3d(-7rem, 0, 0);
+  }
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: rgba(255, 255, 255, 0.329) 2px solid;
+  border-style: inset;
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255); 
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #91a1be; 
+}
+br {
+	line-height: 5em;
 }
