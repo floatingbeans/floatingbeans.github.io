@@ -1,41 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
-	padding-top: 5%;
+	padding-top: 10%;
 	color: white;
-	font-family: "SerenityOS Emoji", monospace;
-
-
+	font-family: "SerenityOS Emoji", "Space Mono";
+  font-weight: 100;
 	background-color: black;
 	
+}
+* {
+  text-transform: lowercase;
 }
 h1,h2,h3,h4,h5,h6,p,li,h3,h4,h5,h6 {
 	text-align: left;
 	padding-left: 5%;
-	  animation-duration: 0.01s;
-
-}
-@keyframes textflicker {
-  from {
-    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
-  }
-  to {
-    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
-  }
-}
-ul {
-	font-size: 150%;
+  text-shadow: #fff 0px 0px 10px;
 }
 
-.blurred {
-animation: pixel forwards 2s ease-in-out;
-}
-* {
-	font-size: 105%;
-	text-transform: lowercase; font-weight: 100; text-align: left;
-	  animation-name: textflicker;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+h1 {
+ 
+  font-size: 500%;
 }
 
 #bar {
@@ -60,9 +44,7 @@ button:hover {
 	font-size: 200%;
 	cursor: pointer;
 }
-h1{
-	font-size: 3.5em;
-}
+
 h2{
 	padding-left: 7.5%;
 	font-size: 2.5em;
@@ -84,14 +66,10 @@ p {
 }
 
 
-@keyframes pixel {
-	100% {
-		filter:blur(25px);
-	}
-}
 a {
 	text-decoration: none;
 	color: lightblue;
+  text-shadow: lightblue 0px 0px 10px;
 }
 a:hover {
 	color: rgb(0, 191, 255);
@@ -243,4 +221,24 @@ html, body{
 }
 br {
 	line-height: 5em;
+}
+.scroll-snap-wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory; 
+}
+
+
+.content {
+  scroll-snap-align: start; 
+  min-height: 100%;
+    width: 100vw;
+  height: 100vh;
+  flex-flow: row wrap;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  overflow: hidden;
 }
