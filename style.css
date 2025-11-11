@@ -223,16 +223,13 @@ br {
 	line-height: 5em;
 }
 .scroll-snap-wrapper {
-  padding-top: 1%;
   height: 100vh;
   overflow-y: scroll;
-  overflow-x: hidden;
   scroll-snap-type: y mandatory; 
 }
 
 
 .content {
-  padding-top: 12%;
   scroll-snap-align: start; 
   min-height: 100%;
     width: 100vw;
