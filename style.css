@@ -27,7 +27,7 @@ body::before {
   height: 100%;
   z-index: -1;
   backdrop-filter: brightness(0.5);
-  background-image: url('pexels-felix-mittermeier-956981.png');
+  background-image: url('pexels-felix-mittermeier-956981.jpg');
   background-size: auto 200%; 
   background-repeat: repeat;
   animation: slide 10000s linear infinite;
