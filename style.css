@@ -1,13 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
-	padding-top: 10%;
 	color: white;
 	font-family: "SerenityOS Emoji", "Space Mono";
   font-weight: 100;
 	background-color: black;
+  background-image: url('background-noise.png');
+
 	
 }
+
+main {
+  height: 100vh;
+  height: 100dvh;
+  color: rgba(255, 255, 255, 0.75); }
+
+.wrapper {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  min-width: 100vw;
+  display: inline-block;
+  white-space: nowrap; }
+
+.code {
+  animation: typewriter 1s steps(14) 1s 1 normal both;
+  line-height: 1;
+  margin: 0;
+  display: inline-block;
+  white-space: nowrap;
+  overflow-x: hidden; }
+
+.cursor {
+  display: inline-block;
+  animation: blinkTextCursor 500ms infinite normal; }
+
+.crt {
+  background-color: #1d1d1d;
+  text-shadow: 0 0 0.2em currentColor, 1px 1px rgba(255, 0, 255, 0.5), -1px -1px rgba(0, 255, 255, 0.4);
+  position: relative; }
+  .crt:before, .crt:after {
+    content: "";
+    transform: translateZ(0);
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    z-index: 1; }
+.crt:before {
+    background: repeating-linear-gradient(rgb(218, 49, 49) 0px, rgb(112,159,115) 2px, rgb(40, 129, 206) 4px); }
+.crt:after {
+    background: repeating-linear-gradient(90deg, rgb(218, 49, 49) 1px, rgb(112,159,115) 2px, rgb(40, 129, 206) 3px); }
+
 * {
   text-transform: lowercase;
 }
@@ -33,6 +79,7 @@ button {
 	font-size: 100%;
 	padding: 1em 1em;
 	margin-left: 7.5%;
+  transition: all 0.25s ease-in-out;
 }
 button:hover {
 
@@ -68,11 +115,13 @@ p {
 
 a {
 	text-decoration: none;
-	color: lightblue;
-  text-shadow: lightblue 0px 0px 10px;
+	color: rgb(123, 224, 255);
+  text-shadow: rgb(0, 255, 225) 0px 0px 10px;
+  transition: all 0.25s ease-in-out;
 }
-a:hover {
-	color: rgb(0, 191, 255);
+a:hover, button:hover {
+  font-size: 125%;
+	filter: brightness(1.5) saturate(2.0);
 }
 li {
 	list-style: none;
@@ -83,142 +132,7 @@ html, body{
 
 }
 
-.bg-noise {
-  height: 100vh;
-  left: 0;
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 100;
-}
-.bg-noise:after {
-  -webkit-animation: noise2 1s steps(2) infinite;
-  animation: noise2 1s steps(2) infinite;
-  background-image: url('https://i.postimg.cc/yNJyHjnF/background-noise.png');
-  background-position: 50%;
-  content: "";
-  height: calc(100vh + 20rem);
-  left: -10rem;
-  position: absolute;
-  top: -10rem;
-  width: calc(100vw + 20rem);
-  will-change: transform;
-}
 
-@-webkit-keyframes noise2 {
-  0% {
-    -webkit-transform: translate3d(0, 9rem, 0);
-    transform: translate3d(0, 9rem, 0);
-  }
-  10% {
-    -webkit-transform: translate3d(-1rem, -4rem, 0);
-    transform: translate3d(-1rem, -4rem, 0);
-  }
-  20% {
-    -webkit-transform: translate3d(-8rem, 2rem, 0);
-    transform: translate3d(-8rem, 2rem, 0);
-  }
-  30% {
-    -webkit-transform: translate3d(9rem, -9rem, 0);
-    transform: translate3d(9rem, -9rem, 0);
-  }
-  40% {
-    -webkit-transform: translate3d(-2rem, 7rem, 0);
-    transform: translate3d(-2rem, 7rem, 0);
-  }
-  50% {
-    -webkit-transform: translate3d(-9rem, -4rem, 0);
-    transform: translate3d(-9rem, -4rem, 0);
-  }
-  60% {
-    -webkit-transform: translate3d(2rem, 6rem, 0);
-    transform: translate3d(2rem, 6rem, 0);
-  }
-  70% {
-    -webkit-transform: translate3d(7rem, -8rem, 0);
-    transform: translate3d(7rem, -8rem, 0);
-  }
-  80% {
-    -webkit-transform: translate3d(-9rem, 1rem, 0);
-    transform: translate3d(-9rem, 1rem, 0);
-  }
-  90% {
-    -webkit-transform: translate3d(6rem, -5rem, 0);
-    transform: translate3d(6rem, -5rem, 0);
-  }
-  to {
-    -webkit-transform: translate3d(-7rem, 0, 0);
-    transform: translate3d(-7rem, 0, 0);
-  }
-}
-@keyframes noise2 {
-  0% {
-    -webkit-transform: translate3d(0, 9rem, 0);
-    transform: translate3d(0, 9rem, 0);
-  }
-  10% {
-    -webkit-transform: translate3d(-1rem, -4rem, 0);
-    transform: translate3d(-1rem, -4rem, 0);
-  }
-  20% {
-    -webkit-transform: translate3d(-8rem, 2rem, 0);
-    transform: translate3d(-8rem, 2rem, 0);
-  }
-  30% {
-    -webkit-transform: translate3d(9rem, -9rem, 0);
-    transform: translate3d(9rem, -9rem, 0);
-  }
-  40% {
-    -webkit-transform: translate3d(-2rem, 7rem, 0);
-    transform: translate3d(-2rem, 7rem, 0);
-  }
-  50% {
-    -webkit-transform: translate3d(-9rem, -4rem, 0);
-    transform: translate3d(-9rem, -4rem, 0);
-  }
-  60% {
-    -webkit-transform: translate3d(2rem, 6rem, 0);
-    transform: translate3d(2rem, 6rem, 0);
-  }
-  70% {
-    -webkit-transform: translate3d(7rem, -8rem, 0);
-    transform: translate3d(7rem, -8rem, 0);
-  }
-  80% {
-    -webkit-transform: translate3d(-9rem, 1rem, 0);
-    transform: translate3d(-9rem, 1rem, 0);
-  }
-  90% {
-    -webkit-transform: translate3d(6rem, -5rem, 0);
-    transform: translate3d(6rem, -5rem, 0);
-  }
-  to {
-    -webkit-transform: translate3d(-7rem, 0, 0);
-    transform: translate3d(-7rem, 0, 0);
-  }
-}
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  border: rgba(255, 255, 255, 0.329) 2px solid;
-  border-style: inset;
-  
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(255, 255, 255); 
-  
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #91a1be; 
-}
 br {
 	line-height: 5em;
 }
@@ -230,10 +144,11 @@ br {
 
 
 .content {
+  padding-top: 10%;
   scroll-snap-align: start; 
-  min-height: 100%;
-    width: 100vw;
-  height: 100vh;
+  min-height: 90%;
+    width: max-content;
+  height: 90%;
   flex-flow: row wrap;
   column-gap: 10px;
   align-items: center;
@@ -241,4 +156,25 @@ br {
 }
 body {
   overflow: hidden;
+}
+h1, h2 {
+  color: rgb(226, 226, 226);
+}
+
+h3 {
+  color: rgb(191, 191, 191);
+}
+h4,h5,h6,p {
+  color: rgb(255, 255, 255);
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  display: block; 
+  transform-origin: left; 
+  transition: all 0.25s ease-in-out;
+}
+:is(h1,h2,h3,h4,h5,h6,p):hover {
+  text-shadow: 0px 0px 40px;
+  color: aquamarine;
+  scale: 1.2;
 }
