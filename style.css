@@ -129,10 +129,10 @@ br {
   backdrop-filter: blur(20px);
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.39);
-  padding-top: 10%;
+  padding-top: 50px;
   scroll-snap-align: start; 
   min-height: 550px;
-  min-width: 1000px;
+  min-width: 1500px;
   max-width: max-content;
   flex-flow: row wrap;
   column-gap: 10px;
