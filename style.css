@@ -139,7 +139,13 @@ br {
   flex-flow: row wrap;
   column-gap: 10px;
   align-items: center;
+  transition: all 0.5s ease-in-out;
   justify-content: center;
+}
+
+.content:hover {
+  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.695);
 }
 
 h1, h2 {
