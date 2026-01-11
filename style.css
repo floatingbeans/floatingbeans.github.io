@@ -1,171 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-body {
-  margin: 0;
-  overflow: hidden;
-  color: white;
-  font-family: "SerenityOS Emoji", "Space Mono";
-  background-color: black;
-  min-height: 100vh;
-
-}
-
-@keyframes slide {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -400% 0; 
-  }
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  backdrop-filter: brightness(0.5);
-  background-image: url('pexels-felix-mittermeier-956981.jpg');
-  background-size: auto 200%; 
-  background-repeat: repeat;
-  animation: slide 10000s linear infinite;
-  will-change: background-position;
-}
-
 * {
-  overflow-wrap: break-word; 
-  text-transform: lowercase;
+box-sizing: border-box;
+overflow-wrap: break-word;
+text-transform: lowercase;
 }
-
+body {
+margin: 0;
+color: white;
+font-family: "SerenityOS Emoji", "Space Mono", monospace;
+background-color: black;
+min-height: 100vh;
+overflow-x: hidden;
+}
+@keyframes slide {
+from { background-position: 0 0; }
+to { background-position: -400% 0; }
+}
+body::before {
+content: "";
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+backdrop-filter: brightness(0.5);
+background-image: url('pexels-felix-mittermeier-956981.jpg');
+background-size: cover;
+background-repeat: repeat;
+animation: slide 100s linear infinite;
+will-change: background-position;
+}
 h1,h2,h3,h4,h5,h6,p,li {
-  text-align: left;
-  padding-left: 5%;
-  text-shadow: #fff 0px 0px 10px;
+text-align: left;
+padding-left: 5%;
+padding-right: 5%;
+text-shadow: #fff 0px 0px 10px;
+display: block;
+transform-origin: left;
+transition: all 0.25s ease-in-out;
 }
-
-h1 {
-  font-size: 500%;
-}
-
-#bar {
-  border-bottom: 2px white solid;
-}
-
-button {
-  background-color: rgba(0, 0, 0, 0);
-  border: 2px white solid;
-  font-family: Space Mono;
-  color:white;
-  font-size: 100%;
-  padding: 1em 1em;
-  margin-left: 7.5%;
-  transition: all 0.25s ease-in-out;
-}
-
-button:hover {
-  background-color: white;
-  color:rgb(0, 0, 0);
-}
-
-#bar button {
-  font-size: 200%;
-  cursor: pointer;
-}
-
-h2 {
-  padding-left: 7.5%;
-  font-size: 2.5em;
-}
-
-h3,h4,h5,h6 {
-  padding-left: 7.5%;
-  font-size: 100%;
-}
-
-p {
-  padding-left: 9%;
-}
-
-@font-face {
-    font-display: block;
-    font-family: "SerenityOS Emoji";
-    font-style: normal;
-    src: local("SerenityOS Emoji"), url("SerenityOS-Emoji.ttf");
-    unicode-range: U+00A9, U+00AE, U+203C, U+2049, U+20E3, U+2122, U+2139, U+2194-2199, U+21A9-21AA, U+231A-231B, U+2328, U+2388, U+23CF, U+23E9-23F3, U+23F8-23FA, U+24C2, U+25AA-25AB, U+25B6, U+25C0, U+25FB-25FE, U+2600-27EF, U+2934-2935, U+2B00-2BFF, U+3030, U+303D, U+3297, U+3299, U+1F000-1F64F, U+1F680-1F6FF, U+1F774-1F77F, U+1F7D5-1F7FF, U+1F80C-1F80F, U+1F848-1F84F, U+1F85A-1F85F, U+1F888-1F88F, U+1F8AE-1F8FF, U+1F90C-1FAFF;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(123, 224, 255);
-  text-shadow: rgb(0, 255, 225) 0px 0px 10px;
-  transition: all 0.25s ease-in-out;
-}
-
-a:hover, button:hover {
-  font-size: 125%;
-  filter: brightness(1.5) saturate(2.0);
-}
-
-li {
-  list-style: none;
-}
-
-br {
-  line-height: 5em;
-}
-
-.scroll-snap-wrapper {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory; 
-  overflow-x:hidden;
-}
-
-.content {
-  margin-bottom: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  backdrop-filter: blur(20px);
-  border-radius: 50px;
-  background-color: rgba(0, 0, 0, 0.39);
-  padding-top: 50px;
-  scroll-snap-align: start; 
-  min-height: 550px;
-  min-width: 1500px;
-  max-width: max-content;
-  flex-flow: row wrap;
-  column-gap: 10px;
-  align-items: center;
-  transition: all 0.5s ease-in-out;
-  justify-content: center;
-}
-
-.content:hover {
-  backdrop-filter: blur(1px);
-  background-color: rgba(0, 0, 0, 0.695);
-}
-
-h1, h2 {
-  color: rgb(226, 226, 226);
-}
-
-h3 {
-  color: rgb(191, 191, 191);
-}
-
-h4,h5,h6,p {
-  color: rgb(255, 255, 255);
-}
-
-h1,h2,h3,h4,h5,h6,p {
-  display: block; 
-  transform-origin: left; 
-  transition: all 0.25s ease-in-out;
-}
-
+h1 { font-size: clamp(2.5rem, 10vw, 500%); color: rgb(226, 226, 226); }
+h2 { font-size: clamp(1.8rem, 6vw, 2.5em); color: rgb(226, 226, 226); padding-left: 7.5%; }
+h3 { color: rgb(191, 191, 191); padding-left: 7.5%; font-size: 1.2rem; }
+h4,h5,h6,p { color: rgb(255, 255, 255); padding-left: 7.5%; font-size: 1rem; }
+p { padding-left: 9%; line-height: 1.6; }
 :is(h1,h2,h3,h4,h5,h6,p):hover {
-  text-shadow: 0px 0px 40px;
+text-shadow: 0px 0px 40px;
+}
+#bar {
+border-bottom: 2px white solid;
+display: flex;
+flex-wrap: wrap;
+padding: 10px 0;
+}
+button {
+background-color: rgba(0, 0, 0, 0);
+border: 2px white solid;
+font-family: Space Mono;
+color: white;
+font-size: 100%;
+padding: 1em 1.5em;
+margin: 10px 0 10px 7.5%;
+transition: all 0.25s ease-in-out;
+cursor: pointer;
+width: fit-content;
+}
+button:hover {
+background-color: white;
+color: rgb(0, 0, 0);
+}
+#bar button {
+font-size: clamp(1rem, 4vw, 200%);
+}
+a {
+text-decoration: none;
+color: rgb(123, 224, 255);
+text-shadow: rgb(0, 255, 225) 0px 0px 10px;
+transition: all 0.25s ease-in-out;
+}
+a:hover, button:hover {
+font-size: 110%;
+filter: brightness(1.5) saturate(2.0);
+}
+li { list-style: none; }
+br { line-height: 5em; }
+.scroll-snap-wrapper {
+height: 100vh;
+overflow-y: scroll;
+scroll-snap-type: y mandatory;
+}
+.content {
+margin: 5vh auto;
+width: 90%;
+max-width: 1000px;
+backdrop-filter: blur(20px);
+border-radius: 30px;
+background-color: rgba(0, 0, 0, 0.39);
+padding: 40px 20px;
+scroll-snap-align: start;
+min-height: 80vh;
+display: flex;
+flex-direction: column;
+transition: all 0.5s ease-in-out;
+}
+.content:hover {
+backdrop-filter: blur(1px);
+background-color: rgba(0, 0, 0, 0.695);
+}
+@font-face {
+font-display: block;
+font-family: "SerenityOS Emoji";
+font-style: normal;
+src: local("SerenityOS Emoji"), url("SerenityOS-Emoji.ttf");
+}
+@media (max-width: 600px) {
+.content {
+width: 95%;
+border-radius: 30px;
+padding: 40px 10px;
+min-height: 70vh;
+}
+h1 { text-align: center; padding-left: 0; }
+h2, h3, h4, p { text-align: center; padding-left: 5%; padding-right: 5%; }
+button { margin: 20px auto; display: block; }
 }
