@@ -15,59 +15,71 @@
     <link href="style.css" rel="stylesheet">
 </head>
 
-<body onload="check()">
+<body>
 
+<div class="scroll-snap-wrapper">
 
-    <div class="scroll-snap-wrapper">
+    
+    <div class="content">
+        <span><button class="redbutton" onclick="window.location.assign(`https://github.com/floatingbeans/floatingbeans.github.io/issues/new`)">report a problem</button> </span>
+       <h1>floatingbeans</h1> 
+       <span> <h2>about me</h2>
+        <p style="font-size:175%;"><i>who i am</i></p>
+        <ul>
+            <li>🐧 current os: ubuntu</li>
+            <li>🥁 instrument: drum kit</li>
+            <li>🖥️ languages: js, css, c++, bash,</li>
+            <li>🎮 games: half life, postal 2, minecraft, doom, geometry dash</li>
+        </ul>
+    </div>
 
-        <div class="content">
-            <h1>floatingbeans</h1>
-            <h2>about me</h2>
-            <p style="font-size:175%;"><i>who i am</i></p>
-            <ul>
-                <li>🐧 current os: ubuntu</li>
-                <li>🥁 instrument: drum kit</li>
-                <li>🖥️ Languages: JS, CSS, C++, Bash, </li>
-                <li>🎮 Games: Half Life, POSTAL 2, Minecraft, DOOM, Geometry Dash</li>
-            </ul>
+    <div class="content">
+        <h2>socials</h2>
+        <p style="font-size:175%;"><i>my socials, conveniently arranged in a list</i></p>
+        <ul style="font-size: 200%; text-align: left; padding-left:25%;">
+            <li><a href="https://www.instagram.com/gordonbeanmanowo/"><i class="fab fa-instagram"></i> instagram</a></li>
+            <li><a href="https://youtube.com/@floatingbeans"><i class="fab fa-youtube"></i> youtube</a></li>
+            <li><a href="https://steamcommunity.com/profiles/76561199336961446/"><i class="fab fa-steam"></i> steam</a></li>
+            <li><a href="https://www.xbox.com/en-IN/play/user/Beans6650"><i class="fab fa-xbox"></i> xbox</a></li>
+            <li><a href="https://open.spotify.com/user/31e2apn5juv3dwbw53day6w4hwtq"><i class="fab fa-spotify"></i> spotify</a></li>
+            <li><a href="https://github.com/floatingbeans"><i class="fab fa-github"></i> github</a></li>
+        </ul>
+    </div>
+
+    <div class="content" >
+        <h2>music</h2>
+        <p style="font-size:175%;"><i>my music</i></p>
+        
+        <div class="cddiv">
+           <span style="display: flex;"> <img class="cd" style="cursor: pointer;" onclick="window.open('https://azured.bandcamp.com')" src="pngimg.com - compact_disc_PNG102152.png" width="128px" height="128px"> <h3>Latest Releases (fetched from <a href="https://azured.bandcamp.com">BandCamp</a>)</h3></span>   
         </div>
 
-        <div class="content">
-            <h2>Socials</h2>
-            <p style="font-size:175%;"><i>my socials, conveniently arranged in a list</i></p>
-            <ul style="font-size: 200%; text-align: left; padding-left:25%;">
-                <li><a href="https://www.instagram.com/gordonbeanmanowo/"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li><a href="https://youtube.com/@floatingbeans"><i class="fab fa-youtube"></i> Youtube</a></li>
-                <li><a href="https://steamcommunity.com/profiles/76561199336961446/"><i class="fab fa-steam"></i> Steam</a></li>
-                <li><a href="https://www.xbox.com/en-IN/play/user/Beans6650"><i class="fab fa-xbox"></i> Xbox</a></li>
-                <li><a href="https://open.spotify.com/user/31e2apn5juv3dwbw53day6w4hwtq"><i class="fab fa-spotify"></i> Spotify</a></li>
-                <li><a href="https://github.com/floatingbeans"><i class="fab fa-github"></i> Github</a></li>
-            </ul>
-        </div>
+        <div id="header"></div>
+        <div id="releases" class="release-grid">loading...</div>
 
-        <div class="content">
-            <h2>Projects</h2>
-            <p style="font-size:175%;"><i>serious projects, for other projects visit <a href="https://floatingbeans.github.io/funpage/">https://floatingbeans.github.io/funpage/</a></i></p>
-            <ul>
-                <li><a href="https://floatingbeans.github.io/docs/">-> FloatingBeans' Document Archive</a></li>
-                <li><a href="https://github.com/floatingbeans/ToxicWaste-AFTERMATH">-> Doom 2: Toxic Waste (made in collaboration with <span>Tormater Team</span>)</a></li>
-            </ul>
-        </div>
+        <script src="music.js"></script>
+    </div>
 
-        <div class="content">
-            <h2>about the site/misc</h2>
-            <p style="font-size:175%;"><i>general information about the site</i></p>
-            
-            <h3>update changelog:</h3>
-            <p>css overhaul, multiple layout changes, many improvements, proper html formatting, readabale code, lighter css</p>
-            
-            <h3>time capsules:</h3>
-            <button onclick="window.location.assign('testing.html')">classic homepage</button>
-            <button onclick="window.location.assign('old/warn.html')">Half Life era</button>
-            <button onclick="window.location.assign('docs.html')">Hosted Docs</button>
-        </div>
+    <div class="content">
+        <h2>projects</h2>
+        <p style="font-size:175%;"><i>serious projects, for other projects visit <a href="https://floatingbeans.github.io/funpage/">https://floatingbeans.github.io/funpage/</a></i></p>
+        <ul>
+            <li><a href="https://floatingbeans.github.io/docs/">-> floatingbeans' document archive</a></li>
+            <li><a href="https://github.com/floatingbeans/ToxicWaste-AFTERMATH">-> doom 2: toxic waste (made in collaboration with <span>tormater team</span>)</a></li>
+        </ul>
+    </div>
 
-    </div> 
+    <div class="content">
+        <h2>about the site/misc</h2>
+        <p style="font-size:175%;"><i>general information about the site</i></p>
+        <h3>update changelog:</h3>
+        <p>css overhaul, multiple layout changes, many improvements, proper html formatting, readabale code, lighter css</p>
+        <h3>time capsules:</h3>
+        <button onclick="window.location.assign('testing.html')">classic homepage</button>
+        <button onclick="window.location.assign('old/warn.html')">half life era</button>
+        <button onclick="window.location.assign('docs.html')">hosted docs</button>
+    </div>
 
+</div>
 </body>
 </html>

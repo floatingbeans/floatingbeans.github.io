@@ -10,7 +10,7 @@ color: white;
 font-family: "SerenityOS Emoji", "Space Mono", monospace;
 background-color: black;
 min-height: 100vh;
-overflow-x: hidden;
+overflow: hidden;
 }
 @keyframes slide {
 from { background-position: 0 0; }
@@ -32,11 +32,12 @@ animation: slide 100s linear infinite;
 will-change: background-position;
 }
 h1,h2,h3,h4,h5,h6,p,li {
+width: fit-content;
 text-align: left;
 padding-left: 5%;
 padding-right: 5%;
 text-shadow: #fff 0px 0px 10px;
-display: block;
+
 transform-origin: left;
 transition: all 0.25s ease-in-out;
 }
@@ -99,10 +100,13 @@ border-radius: 30px;
 background-color: rgba(0, 0, 0, 0.39);
 padding: 40px 20px;
 scroll-snap-align: start;
-min-height: 80vh;
-display: flex;
-flex-direction: column;
+height: 85vh; /* Fixed height so it doesn't grow with the music */
+    overflow: hidden; /* Prevent the card itself from scrolling */
+    display: flex;
+    flex-direction: column;
 transition: all 0.5s ease-in-out;
+
+    
 }
 .content:hover {
 backdrop-filter: blur(1px);
@@ -119,9 +123,101 @@ src: local("SerenityOS Emoji"), url("SerenityOS-Emoji.ttf");
 width: 95%;
 border-radius: 30px;
 padding: 40px 10px;
+overflow: hidden;
 min-height: 70vh;
 }
 h1 { text-align: center; padding-left: 0; }
 h2, h3, h4, p { text-align: center; padding-left: 5%; padding-right: 5%; }
 button { margin: 20px auto; display: block; }
+}
+.cd {
+    animation: spin linear 5s infinite;
+}
+
+@keyframes spin {
+    100%
+    {
+        rotate: 360deg;
+    }
+}
+.cddiv {
+    display: flex;
+    justify-content: center; /* Centers the CD if you want it aligned with the music */
+    width: 100%;
+}
+/* Container for the grid */
+.release-grid {
+display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+    
+    /* This is the magic part: */
+    overflow-y: auto; 
+    flex-grow: 1; /* Takes up the remaining space in the card */
+    padding-right: 10px; /* Space for a scrollbar */
+    
+}
+
+
+.release-card {
+    border: rgba(255, 255, 255, 0.494) 2px solid;
+    backdrop-filter: blur(2px);
+    background: #1a1a1a93; 
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.release-card:hover {
+    background: #282828;
+}
+
+.release-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+.release-card h3 {
+    font-size: 1rem;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.release-card span {
+    color: #b3b3b3;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.play-btn {
+    margin-top: 10px;
+    color: #1db954; /* Spotify Green */
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.cddiv span {
+       transition: all 0.5s ease-in-out;
+}
+.cddiv span:hover {
+text-align: left;
+}
+.redbutton {
+    background-color: rgb(165, 0, 0);
+border: 2px white solid;
+font-family: Space Mono;
+color: white;
+display: flex;
+margin-left: auto;
 }
