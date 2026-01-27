@@ -14,8 +14,9 @@ async function buildEmbed() {
         const response = await fetch(PROXY_URL);
         const wrapper = await response.json();
         
-        const data = JSON.parse(wrapper.contents);
-
+        var data = JSON.parse(wrapper.contents);
+        console.log(data);
+        data.items = data.items.slice(0,4);
         // noooo my loading text :(((
         if (headerContainer) headerContainer.innerHTML = ""; 
         const html = data.items.map(item => {
@@ -43,24 +44,3 @@ async function buildEmbed() {
 
 
 buildEmbed();
-const container = document.getElementById('snap-container');
-const sections = document.querySelectorAll('.content');
-const sectionHeight = window.innerHeight;
-
-
-container.scrollTop = sectionHeight;
-
-container.addEventListener('scroll', () => {
-    const scrollPos = container.scrollTop;
-    const totalHeight = container.scrollHeight;
-
-
-    if (scrollPos + sectionHeight >= totalHeight) {
-        container.scrollTo({ top: sectionHeight, behavior: 'instantly' });
-    }
-
-
-    if (scrollPos <= 0) {
-        container.scrollTo({ top: totalHeight - (sectionHeight * 2), behavior: 'instantly' });
-    }
-});
