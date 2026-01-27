@@ -171,6 +171,9 @@ display: grid;
     transition: background 0.3s ease, transform 0.2s ease;
     display: flex;
     flex-direction: column;
+    
+    text-overflow: ellipsis;
+    width: 225px;
 }
 
 .release-card:hover {
@@ -190,7 +193,7 @@ display: grid;
 .release-card h3 {
     font-size: 1rem;
     margin: 0;
-    white-space: nowrap;
+    
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -203,7 +206,7 @@ display: grid;
 
 .play-btn {
     margin-top: 10px;
-    color: #1db954; /* Spotify Green */
+    color: #00fbff;
     font-weight: bold;
     font-size: 0.9rem;
 }
