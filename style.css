@@ -100,8 +100,8 @@ border-radius: 30px;
 background-color: rgba(0, 0, 0, 0.39);
 padding: 40px 20px;
 scroll-snap-align: start;
-height: 85vh; /* Fixed height so it doesn't grow with the music */
-    overflow: hidden; /* Prevent the card itself from scrolling */
+height: 85vh; 
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
 transition: all 0.5s ease-in-out;
@@ -142,20 +142,18 @@ button { margin: 20px auto; display: block; }
 }
 .cddiv {
     display: flex;
-    justify-content: center; /* Centers the CD if you want it aligned with the music */
+    justify-content: center; 
     width: 100%;
 }
-/* Container for the grid */
+
 .release-grid {
 display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
     margin-top: 10px;
-    
-    /* This is the magic part: */
     overflow-y: auto; 
-    flex-grow: 1; /* Takes up the remaining space in the card */
-    padding-right: 10px; /* Space for a scrollbar */
+    flex-grow: 1;
+    padding-right: 10px; 
     
 }
 
