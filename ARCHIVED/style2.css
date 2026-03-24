@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+box-sizing: border-box;
+overflow-wrap: break-word;
+text-transform: lowercase;
+}
+body {
+margin: 0;
+color: white;
+font-family: "SerenityOS Emoji", "Space Mono", monospace;
+background-color: black;
+min-height: 100vh;
+overflow: hidden;
+}
+@keyframes slide {
+from { background-position: 0 0; }
+to { background-position: -400% 0; }
+}
+body::before {
+content: "";
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+backdrop-filter: brightness(0.5);
+background-image: url('pexels-felix-mittermeier-956981.jpg');
+background-size: cover;
+background-repeat: repeat;
+animation: slide 100s linear infinite;
+will-change: background-position;
+}
+h1,h2,h3,h4,h5,h6,p,li {
+width: fit-content;
+text-align: left;
+padding-left: 5%;
+padding-right: 5%;
+text-shadow: #fff 0px 0px 10px;
+
+transform-origin: left;
+transition: all 0.25s ease-in-out;
+}
+h1 { font-size: clamp(2.5rem, 10vw, 500%); color: rgb(226, 226, 226); }
+h2 { font-size: clamp(1.8rem, 6vw, 2.5em); color: rgb(226, 226, 226); padding-left: 7.5%; }
+h3 { color: rgb(191, 191, 191); padding-left: 7.5%; font-size: 1.2rem; }
+h4,h5,h6,p { color: rgb(255, 255, 255); padding-left: 7.5%; font-size: 1rem; }
+p { padding-left: 9%; line-height: 1.6; }
+:is(h1,h2,h3,h4,h5,h6,p):hover {
+text-shadow: 0px 0px 40px;
+}
+#bar {
+border-bottom: 2px white solid;
+display: flex;
+flex-wrap: wrap;
+padding: 10px 0;
+}
+button {
+background-color: rgba(0, 0, 0, 0);
+border: 2px white solid;
+font-family: Space Mono;
+color: white;
+font-size: 100%;
+padding: 1em 1.5em;
+margin: 10px 0 10px 7.5%;
+transition: all 0.25s ease-in-out;
+cursor: pointer;
+width: fit-content;
+}
+button:hover {
+background-color: white;
+color: rgb(0, 0, 0);
+}
+#bar button {
+font-size: clamp(1rem, 4vw, 200%);
+}
+a {
+text-decoration: none;
+color: rgb(123, 224, 255);
+text-shadow: rgb(0, 255, 225) 0px 0px 10px;
+transition: all 0.25s ease-in-out;
+}
+a:hover, button:hover {
+font-size: 110%;
+filter: brightness(1.5) saturate(2.0);
+}
+li { list-style: none; }
+br { line-height: 5em; }
+.scroll-snap-wrapper {
+height: 100vh;
+overflow-y: scroll;
+scroll-snap-type: y mandatory;
+}
+.content {
+margin: 5vh auto;
+width: 90%;
+max-width: 1000px;
+backdrop-filter: blur(20px);
+border-radius: 30px;
+background-color: rgba(0, 0, 0, 0.39);
+padding: 40px 20px;
+scroll-snap-align: start;
+height: 85vh; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+transition: all 0.5s ease-in-out;
+
+    
+}
+.content:hover {
+backdrop-filter: blur(1px);
+background-color: rgba(0, 0, 0, 0.695);
+}
+@font-face {
+font-display: block;
+font-family: "SerenityOS Emoji";
+font-style: normal;
+src: local("SerenityOS Emoji"), url("SerenityOS-Emoji.ttf");
+}
+@media (max-width: 600px) {
+.content {
+width: 95%;
+border-radius: 30px;
+padding: 40px 10px;
+overflow: hidden;
+min-height: 70vh;
+}
+h1 { text-align: center; padding-left: 0; }
+h2, h3, h4, p { text-align: center; padding-left: 5%; padding-right: 5%; }
+button { margin: 20px auto; display: block; }
+}
+.cd {
+    animation: spin linear 5s infinite;
+}
+
+@keyframes spin {
+    100%
+    {
+        rotate: 360deg;
+    }
+}
+.cddiv {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+
+.release-grid {
+display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+    overflow-y: auto; 
+    flex-grow: 1;
+    padding-right: 10px; 
+    
+}
+
+
+.release-card {
+    border: rgba(255, 255, 255, 0.494) 2px solid;
+    backdrop-filter: blur(2px);
+    background: #1a1a1a93; 
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    
+    text-overflow: ellipsis;
+    width: 225px;
+}
+
+.release-card:hover {
+    background: #282828;
+}
+
+.release-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+.release-card h3 {
+    font-size: 1rem;
+    margin: 0;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.release-card span {
+    color: #b3b3b3;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.play-btn {
+    margin-top: 10px;
+    color: #00fbff;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.cddiv span {
+       transition: all 0.5s ease-in-out;
+}
+.cddiv span:hover {
+text-align: left;
+}
+.redbutton {
+    background-color: rgb(165, 0, 0);
+border: 2px white solid;
+font-family: Space Mono;
+color: white;
+display: flex;
+margin-left: auto;
+}
