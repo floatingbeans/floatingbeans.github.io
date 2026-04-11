@@ -4,9 +4,9 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1775489134|258828333';
+const CACHE_VERSION = '1775658474|213382786';
 /** @type {string} */
-const CACHE_PREFIX = 'Tormater: Jetpac-sw-cache-';
+const CACHE_PREFIX = 'New Game Project-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 /** @type {string} */
 const OFFLINE_URL = 'index.offline.html';
