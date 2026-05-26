@@ -1,8 +1,16 @@
 body {
     background-color: black;
+    animation: bg infinite ease-in-out 70s;
     color: white;
+    background: radial-gradient(circle,rgba(0, 79, 122, 1) 0%, rgb(0, 26, 60) 100%);
     font-family: monospace;
+    background-size: 300% 100%;
     font-size: 250%;
+}
+@keyframes bg {
+    50% {
+            background-position: 300% 100%;
+    }
 }
 * {
     font-size: 1vw;
@@ -11,15 +19,15 @@ body {
 }
 a {
     text-decoration: none;
-    color: black;
-    background-color: white;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.293);
 }
 button {
 font-family: monospace;
 font-size: 1vw;
 padding: 1.04vw;
-background-color: black;
-color: white;
+background-color: rgba(0, 0, 0, 0.133);
+color: rgb(255, 255, 255);
 border: 0.009vw solid white;
 cursor: pointer;
 }
@@ -64,4 +72,18 @@ width: 99%;
 }
 p,h2,h3 {
     padding-right: 65%;
+}
+p,a,h1,h2,h3,h4,h5,h6 {
+    animation: glow 20s infinite ease-in-out;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px rgb(255, 255, 255);
+    }
+    50% {
+        text-shadow: 0 0 20px rgb(0, 229, 255);
+    }
+    100% {
+        text-shadow: 0 0 20px rgb(255, 255, 255);
+    }
 }
