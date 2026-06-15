@@ -1,16 +1,70 @@
 body {
     background-color: black;
     animation: bg infinite ease-in-out 60s;
+
     color: white;
     background: radial-gradient(circle,rgba(0, 79, 122, 1) 0%, rgb(0, 26, 60) 100%);
     font-family: monospace;
     background-size: 300% 100%;
     font-size: 250%;
+   
+}
+
+
+.whoami p:hover {
+    background-color: white;
+    color: black;
+}
+.whoami p{
+    cursor: pointer;
+    font-size: 150%;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.353);
+    min-width: min-content;
+    max-width: 500px;
+}
+.global-list li{
+    font-size: 150%;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.353);
+    min-width: min-content;
+    max-width: 500px
+}
+.global-list li:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 195, 255);
+    
+}
+ .global-list a {font-size: 150%; width: 100%;}
+@keyframes blur {
+    0% {
+        opacity: 0;
+        
+    }
+    50% {
+        
+    }
+    90% {
+        
+    }
+    100% {
+        filter: blur(0px) brightness(100%);
+    }
+}
+@keyframes bounce {
+ 0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-1.5px); }
+  20%, 40%, 60%, 80% { transform: translateX(1.5px); }
 }
 @keyframes bg {
     50% {
             background-position: 300% 100%;
     }
+}
+.blur {
+    animation: blur 0.5s ease-in-out, bounce 0.5s ease-in-out;
 }
 * {
     font-size: 1vw;
@@ -20,7 +74,7 @@ body {
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.293);
+
 }
 button {
 font-family: monospace;
@@ -36,10 +90,7 @@ button:hover {
     color: black;
     border: black 0.01vw solid;
 }
-a:hover {
-    color: white;
-    background-color: black;
-}
+
 ul {
     padding-left: 5%;
     list-style-type: " --> ";
@@ -55,7 +106,7 @@ ul {
     color: rgba(148, 255, 255, 0.827);
 }
 .ascii {
-    position: absolute;
+    position: fixed;
     top: 20px;     
     right: 20px;  
     margin: 0;
@@ -86,4 +137,7 @@ p,a,h1,h2,h3,h4,h5,h6 {
     100% {
         text-shadow: 0 0 20px rgb(255, 255, 255);
     }
+}
+.content {
+    min-height: 100vh;
 }

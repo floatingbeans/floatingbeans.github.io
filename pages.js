@@ -1,9 +1,14 @@
-
+var cthem
 
 var about = `<h2>about me </h2>
 <p><i>whoami</i></p>
 <ul>
-<p>doom modder, web dev, drummer, geometry dash player.</p>
+<div class="whoami">
+<p id="doom"onclick="doom()">doom modder</p>
+<p id="code" onclick="code()">web dev</p>
+<p id="drum" onclick="drum()">drummer</p>
+<p onclick="index = 2; writ()">music artist</p>
+</div>
 <p>i dual-boot windows and ubuntu, fight me</p>
 <div class="ascii"><p>⠀⠀⠀⠀⠀⠀⠀⠀⠀
             ⣀⣀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -32,8 +37,8 @@ var about = `<h2>about me </h2>
 `
 var social = `<h2>socials</h2>
         <p><i>my socials, conveniently arranged in a list</i></p>
-        <ul>
-            <li><a href="https://www.instagram.com/gordonbeanmanowo/"><i class="fab fa-instagram"></i> instagram</a></li>
+        <ul class="global-list">
+            <li><a href="https://www.instagram.com/beanbeanest/"><i class="fab fa-instagram"></i> instagram</a></li>
             <li><a href="https://youtube.com/@floatingbeans"><i class="fab fa-youtube"></i> youtube</a></li>
             <li><a href="https://steamcommunity.com/profiles/76561199336961446/"><i class="fab fa-steam"></i> steam</a></li>
             <li><a href="https://www.xbox.com/en-IN/play/user/Beans6650"><i class="fab fa-xbox"></i> xbox</a></li>
@@ -76,7 +81,7 @@ var music = `<h2>music</h2>
 
 var projects = `<h2>projects</h2>
         <p><i>serious projects, for other projects visit <a href="https://floatingbeans.github.io/funpage/">https://floatingbeans.github.io/funpage/</a></i></p>
-        <ul>
+        <ul class="global-list">
             <li><a href="https://floatingbeans.github.io/docs/">-> floatingbeans' document archive</a></li>
             <li><a href="https://github.com/floatingbeans/ToxicWaste-AFTERMATH">-> doom 2: toxic waste (made in collaboration with <span>tormater team</span>)</a></li>
         </ul>
@@ -133,14 +138,28 @@ var abouts = `<h2>about the site/misc</h2>
 ⢈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠰⢒⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠅⡀⢀⡀⠤⠂⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⢈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠒⠠⠤⠀⠀⢀⠀⡀⠀⠀⠠⠄⠐⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⢈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p></div>`
+function theme() {
+    cthem = false;
+}
 
 var switcher = ``
-
 
 var pages = [about, social, music, projects, abouts]
 var index = 0
 function writ() {
+const allElements = document.querySelectorAll("body *");
     
+    allElements.forEach(element => {
+        
+        // 1. Remove the class from the previous page turn
+        element.classList.remove("blur");
+        
+        // 2. Force a DOM reflow so the browser registers the reset
+        void element.offsetWidth;
+        
+        // 3. Re-add the class to fire the animation again
+        element.classList.add("blur");
+    }); 
     if (index != Math.abs(index)) {
         index = pages.length - 1
     }
@@ -159,3 +178,80 @@ function next() {
     index++
     writ()
 }
+function shake(el) {
+      const shakeKeyframes = [
+    { transform: 'translateX(0)' },
+    { transform: 'translateX(-6px)' },
+    { transform: 'translateX(6px)' },
+    { transform: 'translateX(-6px)' },
+    { transform: 'translateX(6px)' },
+    { transform: 'translateX(0)' }
+  ];
+
+  
+  const shakeTiming = {
+    duration: 400, 
+    iterations: 1, 
+    easing: 'ease-in-out' 
+  };
+  el.animate(shakeKeyframes, shakeTiming);
+}
+function doom() {
+    const sounds = [
+        "doom1.wav",
+        "doom2.wav",
+        "doom3.wav",
+        "doom4.wav",
+        "doom5.wav",
+        "doom6.wav"
+  ];
+const randomIndex = Math.floor(Math.random() * sounds.length);
+    const selectedSound = sounds[randomIndex];
+  const audio = new Audio(selectedSound);
+    audio.play();
+  shake(document.getElementById('doom'))
+}
+function code() {
+    const soundplay = "DSITMBK.wav"
+    const audio = new Audio(soundplay);
+    audio.play();
+    if(cthem == false) {
+    document.body.style = `
+    background: #2b2b2b;
+    color: #00ff00;
+    `
+    cthem = true;
+    } else {
+        cthem = false;
+    document.body.style = `
+    background-color: black;
+    animation: bg infinite ease-in-out 60s;
+
+    color: white;
+    background: radial-gradient(circle,rgba(0, 79, 122, 1) 0%, rgb(0, 26, 60) 100%);
+    font-family: monospace;
+    background-size: 300% 100%;
+    font-size: 250%;`
+    }
+
+    
+}
+
+function drum() {
+     const sounds = [
+        "drum1.wav",
+        "drum2.wav",
+        "drum3.wav",
+        "drum4.wav",
+        "drum5.wav",
+        "drum6.wav",
+        "drum7.wav",
+        "drum8.wav"
+  ];
+const randomIndex = Math.floor(Math.random() * sounds.length);
+    const selectedSound = sounds[randomIndex];
+  const audio = new Audio(selectedSound);
+    audio.play();
+  shake(document.getElementById('drum'))
+}
+
