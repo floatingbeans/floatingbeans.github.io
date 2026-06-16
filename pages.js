@@ -226,12 +226,9 @@ function code() {
     document.body.style = `
     background-color: black;
     animation: bg infinite ease-in-out 60s;
-
     color: white;
     background: radial-gradient(circle,rgba(0, 79, 122, 1) 0%, rgb(0, 26, 60) 100%);
-    font-family: monospace;
-    background-size: 300% 100%;
-    font-size: 250%;`
+    background-size: 300% 100%;`
     }
 
     
